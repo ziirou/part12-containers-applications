@@ -47,12 +47,14 @@ singleRouter.get('/', async (req, res) => {
 
 /* PUT todo. */
 singleRouter.put('/', async (req, res) => {
-  const allowedFields = ['text', 'done'];
+  const allowedFields = Object.keys(Todo.schema.paths).filter(
+    key => !['_id', '__v'].includes(key)
+  );
   const invalidFields = Object.keys(req.body).filter(
     key => !allowedFields.includes(key)
   );
   if (invalidFields.length > 0) {
-    return res.status(400).json({ error: `Unknown fields: ${invalidFields.join(', ')}` });
+    return res.status(400).json({ error: `Invalid fields: ${invalidFields.join(', ')}` });
   }
   try {
     await req.todo.updateOne(req.body);
