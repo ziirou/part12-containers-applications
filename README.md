@@ -1,4 +1,4 @@
-# Full Stack open Containers (exercises 12.1-12.10)
+# Full Stack open Containers (exercises 12.1-12.11)
 
 This repository contains the answers for the exercises of part 12 (the Containers module)
 of the Full Stack Open course (https://fullstackopen.com/en/part12).

@@ -6,7 +6,7 @@ const router = express.Router();
 router.get('/', async (_, res) => {
   const addedTodos = await getAsync('added_todos') || 0;
   res.send({
-    added_todos: addedTodos
+    added_todos: parseInt(addedTodos)
   });
 });
 
