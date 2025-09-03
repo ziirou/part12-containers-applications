@@ -14,7 +14,7 @@ describe('Todo component', () => {
 
   test('renders todo text', () => {
     render(<Todo todo={baseTodo} deleteTodo={deleteTodo} completeTodo={completeTodo} />)
-    expect(screen.getByText('Test todo')).toBeInTheDocument()
+    expect(screen.getByText('Test todo')).not.toBeInTheDocument()
   })
 
   test('shows "This todo is not done" when todo.done is false', () => {
