@@ -2,8 +2,7 @@
 .gitignore
 .git
 node_modules/
-mongo_data/
-redis_data/
+dist/
 Dockerfile
 dev.Dockerfile
 .env
