@@ -1,11 +1,8 @@
 # todo-app/docker-compose.dev.yml
 
 services:
-  todo-frontend:
+  app:
     image: todo-frontend-dev
-    build:
-      context: ./todo-frontend
-      dockerfile: dev.Dockerfile
     volumes:
       - ./todo-frontend:/usr/src/app
     ports:
@@ -19,4 +16,4 @@ services:
       - 8080:80
     container_name: nginx-reverse-proxy
     depends_on:
-      - todo-frontend
+      - app

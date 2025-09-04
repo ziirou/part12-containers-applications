@@ -2,7 +2,7 @@
 
 services:
   app:
-    image: todo-front-dev
+    image: todo-frontend-dev
     build:
       context: .
       dockerfile: dev.Dockerfile
