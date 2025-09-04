@@ -1,3 +1,5 @@
+# todo-app/todo-frontend/Dockerfile
+
 FROM node:20 AS build-stage
 
 WORKDIR /usr/src/app
