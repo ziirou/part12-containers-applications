@@ -1,0 +1,11 @@
+# todo-app/todo-frontend/docker-compose.yml
+
+services:
+  app:
+    image: todo-frontend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 5173:80   # Map host 5173 to container 80 (Nginx)
+    container_name: todo-frontend

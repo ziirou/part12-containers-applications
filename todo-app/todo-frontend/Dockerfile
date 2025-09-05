@@ -6,7 +6,11 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-ENV VITE_BACKEND_URL=http://localhost:3000
+# for separate runs
+#ENV VITE_BACKEND_URL=http://localhost:3000
+
+# for full stack with Nginx
+ENV VITE_BACKEND_URL=api/
 
 RUN npm ci
 RUN npm run build
